@@ -1,0 +1,13 @@
+@mixin transition($property, $duration) {
+  -moz-transition: $property #{$duration}ms cubic-bezier(0, 0, .21, 1.18);
+  -o-transition: $property #{$duration}ms cubic-bezier(0, 0, .21, 1.18);
+  -webkit-transition: $property #{$duration}ms cubic-bezier(0, 0, .21, 1.18);
+  transition: $property #{$duration}ms cubic-bezier(0, 0, .21, 1.18);
+  -ms-transition: $property #{$duration}ms cubic-bezier(0, 0, .21, 1.18);
+}
+
+@mixin bg-image() {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
