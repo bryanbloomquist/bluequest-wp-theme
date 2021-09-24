@@ -1,9 +1,8 @@
 <?php
-/**
- * Theme functions
- *
- * @package CustomTheme
- */
+    /**
+     * Theme functions
+     * @package CustomTheme
+     */
 
 ob_start();
 

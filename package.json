@@ -1,15 +1,15 @@
 {
-    "name": "custom-theme",
+    "name": "wp-theme-boilerplate",
     "version": "1.0.0",
     "description": "",
     "repository": {
         "type": "git",
-        "url": "git+ssh://git@bitbucket.org:custominteractive/custom-boilerplate-wordpress-theme.git"
+        "url": "git+ssh://git@github.com:bryanbloomquist/wp-theme-boilerplate.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "homepage": "https://bitbucket.org/custominteractive/custom-boilerplate-wordpress-theme#readme",
+    "homepage": "https://github.co/bryanbloomquist/wp-theme-boilerplate#readme",
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.15.3",
         "bootstrap": "^5.0.1",
