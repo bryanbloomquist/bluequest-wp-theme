@@ -1,7 +1,7 @@
 <?php
     /**
      * The template for the homepage.
-     * @package CreedTheme
+     * @package CustomTheme
      * Template Name: Homepage
      */
 

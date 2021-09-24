@@ -1,15 +1,15 @@
 {
-    "name": "creed-theme",
+    "name": "custom-theme",
     "version": "1.0.0",
     "description": "",
     "repository": {
         "type": "git",
-        "url": "git+ssh://git@bitbucket.org:creedinteractive/creed-boilerplate-wordpress-theme.git"
+        "url": "git+ssh://git@bitbucket.org:custominteractive/custom-boilerplate-wordpress-theme.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "homepage": "https://bitbucket.org/creedinteractive/creed-boilerplate-wordpress-theme#readme",
+    "homepage": "https://bitbucket.org/custominteractive/custom-boilerplate-wordpress-theme#readme",
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.15.3",
         "bootstrap": "^5.0.1",

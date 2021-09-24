@@ -4,8 +4,8 @@ add_action( 'init', 'register_custom_taxonomies', 0 );
 
 function register_custom_taxonomies() {
     // register_taxonomy( 
-    //     'creed_condition', 
-    //     [ 'creed_resource' ], 
+    //     'custom_condition', 
+    //     [ 'custom_resource' ], 
     //     [
     //         'hierarchical'      => true, // make it hierarchical (like categories)
     //         'labels'            => [

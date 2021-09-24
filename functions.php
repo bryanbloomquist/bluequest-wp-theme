@@ -2,7 +2,7 @@
 /**
  * Theme functions
  *
- * @package CreedTheme
+ * @package CustomTheme
  */
 
 ob_start();

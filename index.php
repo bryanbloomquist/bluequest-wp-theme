@@ -1,7 +1,7 @@
 <?php
     /**
 	 * The main template file.
-     * @package CreedTheme
+     * @package CustomTheme
      */
 
     get_header(); 
