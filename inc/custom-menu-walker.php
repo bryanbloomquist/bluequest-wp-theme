@@ -3,9 +3,6 @@
 class Custom_Walker extends Walker_Nav_Menu {
 
     function start_el( &$output, $item, $depth=0, $args=[], $id=0) {
-        $title = $item->title;
-        $permalink = $item->url;
-        
         $classes = empty( $item->classes ) ? array() : (array) $item->classes;
         $classes[] = 'menu-item' . $item->ID;
         $args = apply_filters( 'nav_menu_item_args', $args, $item, $depth );
@@ -14,18 +11,22 @@ class Custom_Walker extends Walker_Nav_Menu {
 
         $output .= '<li' . $class_names . '>';
         
-        if( $permalink && $permalink != '#' ) {
-            $output .= '<a href="' . $permalink . '" class="nav-link">';
+        if( $item->url && $item->url != '#' ) {
+            $output .= '<a href="' . $item->url . '" class="nav-link">';
         } else {
             $output .= '<span>';
         }
 
-        $output .= $title;
+        $output .= $item->title;
 
-        if( $permalink && $permalink != '#'  ) {
+        if( $item->url && $item->url != '#'  ) {
             $output .= '</a>';
         } else {
             $output .= '</span>';
+        }
+
+        if ( $args->show_carets && $args->walker->has_children) {
+            $output .= '<i class-"caret fa fa-angle-down"></i>';
         }
     }
 }
@@ -33,9 +34,6 @@ class Custom_Walker extends Walker_Nav_Menu {
 class Custom_Footer_Walker extends Walker_Nav_Menu {
 
     function start_el( &$output, $item, $depth=0, $args=array(), $id = 0) {
-        $title = $item->title;
-        $permalink = $item->url;
-
         $classes = empty( $item->classes ) ? array() : (array) $item->classes;
         $classes[] = 'menu-item' . $item->ID;
         $args = apply_filters( 'nav_menu_item_args', $args, $item, $depth );
@@ -44,15 +42,15 @@ class Custom_Footer_Walker extends Walker_Nav_Menu {
 
         $output .= '<li' . $class_names . '>';
         
-        if( $permalink && $permalink != '#' ) {
-            $output .= '<a href="' . $permalink . '">';
+        if( $item->url && $item->url != '#' ) {
+            $output .= '<a href="' . $item->url . '">';
         } else {
             $output .= '<span>';
         }
 
-        $output .= $title;
+        $output .= $item->title;
 
-        if( $permalink && $permalink != '#' ) {
+        if( $item->url && $item->url != '#' ) {
             $output .= '</a>';
         } else {
             $output .= '</span>';

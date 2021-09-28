@@ -16,17 +16,18 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".header__nav" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler__icon">MENU <span class="icon-menu"></span></span>
             </button>
-            <div class="header__nav collapse navbar-collapse">
-                <?php
-                    wp_nav_menu([
-                        'theme_location'  => 'custom-theme-main-navigation',
-                        'container_class' => '',
-                        'container_id'    => 'mainNavigation',
-                        'menu_class'      => 'navbar-nav ml-auto',
-                        'walker' => new Custom_Walker()
-                    ]);
-                ?>
-            </div>
+            <?php
+                wp_nav_menu([
+                    'theme_location'    => 'custom-theme-main-navigation',
+                    'depth'             => 2,
+                    'container'         => 'div',
+                    'container_class'   => 'navbar-collapse collapse',
+                    'container_id'      => 'main-menu',
+                    'menu_class'        => 'navbar-nav ml-auto',
+                    'walker'            => new Custom_Walker(),
+                    'show_carets'       => true
+                ]);
+            ?>
         </div>
     </nav>
 </header><!-- #masthead -->
