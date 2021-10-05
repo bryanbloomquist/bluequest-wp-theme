@@ -4,7 +4,7 @@ function custom_theme_setup() {
 
     add_theme_support( 'post-thumbnails' );
 
-    register_nav_menu( array(
+    register_nav_menus( array(
         'custom-theme-main-navigation'   => __( 'Main Navigation' ),
         'custom-theme-footer-navigation' => __( 'Footer Navigation' )
     ) );
