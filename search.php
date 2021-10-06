@@ -1,19 +1,23 @@
 <?php get_header(); ?>
 
-<div class="container">
-    <h2>Search Results</h2>
-    <?php 
-        if ( have_posts() ) {
-            echo '<ul class="search-results">';
-                while ( have_posts() ) { 
-                    the_post();
-                    echo '<li><h5><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h5></li>';
-                }
-            echo '</ul>';
-        } else {
-            echo '<p>No search results found.</p>';
-        }; 
-    ?>
-</div>
+    <section class="page-content">
+        <div class="page-content__container">
+            <h2>Search results for query: "<?php the_search_query(); ?>"</h2>
+            <?php if ( have_posts() ) : ?>
+                <ul class="search-results">
+                    <?php while ( have_posts() ) : the_post(); ?>
+                        <li>
+                            <div>
+                                <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+                                <p><?php the_excerpt(); ?></p>
+                            </div>
+                        </li>
+                    <?php endwhile; ?>
+                </ul>
+            <?php else : ?>
+                <p>No search results found.</p>
+            <?php endif; ?>
+        </div>
+    </section>
 
 <?php get_footer() ?>
