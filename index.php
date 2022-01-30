@@ -1,27 +1,20 @@
 <?php
     /**
 	 * The main template file.
-     * @package CustomTheme
+     * @package BlueQuest
      */
 
     get_header(); 
 ?>
 
-<section class="page-hero">
-    <h1 class="page-hero__title"><?php echo the_title(); ?></h1>
-</section>
+    <h1 class="p-5 display-6"><?php echo the_title(); ?></h1>
 
-<section class="page-content">
-    <div class="page-content__container">
-        <?php
-            if ( have_posts() ) {
-                while ( have_posts() ) {
-                    the_post();
-                    the_content();
-                }
-            }
-        ?>
+    <div class="container">
+        <?php if ( have_posts() ) :
+            while ( have_posts() ) : the_post();
+                the_content();
+            endwhile;
+        endif; ?>
     </div>
-</section>
 
 <?php get_footer(); ?>

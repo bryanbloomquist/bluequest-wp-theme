@@ -47,7 +47,7 @@
         return $columns;
     });
 
-        /**
+    /**
      * Add featured image column to WP admin panel - posts AND pages
      * See: https://bloggerpilot.com/featured-image-admin/
      */

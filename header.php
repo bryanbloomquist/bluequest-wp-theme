@@ -1,7 +1,7 @@
 <?php
     /**
      * Theme header
-     * @package CustomTheme
+     * @package BlueQuest
      */
 
     get_template_part('parts/global/meta', 'meta'); 

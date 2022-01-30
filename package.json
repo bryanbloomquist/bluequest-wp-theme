@@ -1,29 +1,19 @@
 {
-    "name": "wp-theme-boilerplate",
+    "name": "bluequest-wp-theme",
     "version": "1.0.0",
     "description": "",
     "repository": {
         "type": "git",
-        "url": "git+ssh://git@github.com:bryanbloomquist/wp-theme-boilerplate.git"
+        "url": "git+ssh://git@github.com:bryanbloomquist/bluequest-wp-theme.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "homepage": "https://github.co/bryanbloomquist/wp-theme-boilerplate#readme",
-    "devDependencies": {
-        "@fortawesome/fontawesome-free": "^5.15.3",
-        "bootstrap": "^5.0.1",
-        "del": "^6.0.0",
-        "gulp": "^4.0.2",
-        "gulp-concat": "^2.6.1",
-        "gulp-minify": "^3.1.0",
-        "gulp-minify-css": "^1.2.4",
-        "gulp-sass": "^5.0.0",
-        "node-sass": "^6.0.1",
-        "gulp-sourcemaps": "^3.0.0",
-        "sass": "^1.37.0"
+    "homepage": "https://github.co/bryanbloomquist/bluequest-wp-theme#readme",
+    "scripts": {
+        "sass": "sass --watch assets/scss/main.scss assets/css/main.css"
     },
-    "dependencies": {
-        "bootstrap-icons": "^1.5.0"
+    "devDependencies": {
+        "sass": "^1.49.0"
     }
 }
