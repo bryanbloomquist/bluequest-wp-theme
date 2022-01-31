@@ -1,0 +1,63 @@
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+    content: $content;
+    display: $display;
+    position: $pos;
+	/* 	EXAMPLE USAGE
+	 * 	div::after {
+	 * 		@include psuedo;
+	 * 	}
+	 */
+}
+
+@mixin transition($property, $duration) {
+    -moz-transition: $property #{$duration}ms cubic-bezier(0, 0, 0.21, 1.18);
+    -o-transition: $property #{$duration}ms cubic-bezier(0, 0, 0.21, 1.18);
+    -webkit-transition: $property #{$duration}ms cubic-bezier(0, 0, 0.21, 1.18);
+    transition: $property #{$duration}ms cubic-bezier(0, 0, 0.21, 1.18);
+    -ms-transition: $property #{$duration}ms cubic-bezier(0, 0, 0.21, 1.18);
+    /*  EXAMPLE USAGE
+     *  div {
+     *      @include transition(all, 5000);
+     *  }
+     */
+}
+
+@mixin bg-image() {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+$breakpoints: (
+    "bs-sm":	36em,		// 576px
+    "bs-md":	48em,		// 768px
+    "bs-lg":	62em,		// 992px
+    "bs-xl":	75em,		// 1200px
+    "bs-xxl":	87.5em,		// 1400px
+);
+
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+	/*	EXAMPLE USAGE
+	 * 	.site-header {
+	 * 		padding: 2rem;
+	 * 		font-size: 1.8rem;
+	 * 		@include mq('bs-xl') {
+	 * 			padding-top: 4rem;
+	 * 			font-size: 2.4rem;
+	 * 		}
+     *      @include mq('bs-sm', max) {
+     *          font-size: 1.4rem;
+     *      }
+	 * 	}
+	 */
+}

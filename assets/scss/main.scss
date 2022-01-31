@@ -1,4 +1,8 @@
-@import "util/index";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../node_modules/slick-carousel/slick/slick-theme.scss";
+
+@import "abstracts/index";
 @import "components/index";
-@import "common/index";
+@import "layout/index";
 @import "templates/index"; 

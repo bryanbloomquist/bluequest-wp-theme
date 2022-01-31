@@ -1,0 +1,33 @@
+$version: "1.0.0";
+
+// Variables x Bootstrap Overrides
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Primary Palette
+$color-navy-blue: #0e2c69;
+$color-sky-blue: #449fd8;
+$color-white: #ffffff;
+
+// Secondary Palette
+$color-black: #000000;
+$color-gray: #a1a8ab;
+$color-light-gray: #d2d3d5;
+
+// Tertiary Palette
+$color-water: #2b5a84;
+$color-red: #9e2c2a;
+$color-green: #6b7e41;
+$color-orange: #c3622b;
+$color-aqua: #5ea5c3;
+$color-purple: #7275bc;
+$color-dark-gray: #8a8b8d;
+$color-gold: #c2af3a;
+
+$color-background: #ededee;
+$color-background-blue: darken($color-navy-blue, 7.5%);
+$color-font: #666666;
+$color-border: rgba($color-navy-blue, 0.3);
+
+$color-light-gray-opaque: rgba(151, 151, 151, 0.5);
